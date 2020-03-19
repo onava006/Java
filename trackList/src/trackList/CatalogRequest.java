@@ -40,6 +40,8 @@ public class CatalogRequest {
 			System.out.println();
 		}
 		
+		System.out.println(band.Songs.get("Guau dice mi perro"));
+		
 		
 	}
 

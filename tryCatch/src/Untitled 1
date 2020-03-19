@@ -1,0 +1,42 @@
+int indice = 0;
+		boolean test = true;
+		
+		while(test){
+					
+			try {
+				for(int i = indice; i < myList.size(); i++) {
+					indice = i;
+				    Integer castedValue = (Integer) myList.get(i);
+				    integerList.add(castedValue);
+				}
+			}
+			
+		
+			catch(NumberFormatException er) {
+				System.out.println("No se pudo hacer el casting, NumberFormatException");
+				System.out.println("El indice que no funciona es el " + indice);
+				System.out.println("El valor que no funciona es " + myList.get(indice));
+				String exception = myList.get(indice).toString();
+				Integer castedValue = exception.length();
+				
+				System.out.println(integerList);
+				indice ++;
+			}
+			catch(ClassCastException e){
+				System.out.println("No se pudo hacer el casting, ClassCastException");
+				System.out.println("El indice que no funciona es el " + indice);
+				System.out.println("El valor que no funciona es " + myList.get(indice));
+				Integer castedValue = (Integer)myList.get(indice).toString().length();
+				integerList.add(castedValue);
+				
+				
+				System.out.println(integerList);
+				indice ++;
+			}
+			
+			
+			if(indice == myList.size()-1) {
+				test = false;
+			}
+			
+		}

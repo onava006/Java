@@ -17,6 +17,7 @@ public class CatchExceptions {
 //		for(int i = 0; i < myList.size(); i++) {
 //		    Integer castedValue = (Integer) myList.get(i);
 //		}
+		
 		int indice = 0;
 		boolean test = true;
 		
@@ -34,29 +35,17 @@ public class CatchExceptions {
 				System.out.println("No se pudo hacer el casting, ClassCastException");
 				System.out.println("El indice que no funciona es el " + indice);
 				System.out.println("El valor que no funciona es " + myList.get(indice));
+				indice++;
 				
-				String exception = myList.get(indice).toString();
-				Integer castedValue = exception.length();
-				integerList.add(castedValue);
-				System.out.println(integerList);
-				indice ++;
 			}
 			
-			catch(NumberFormatException er) {
-				System.out.println("No se pudo hacer el casting, NumberFormatException");
-				System.out.println("El indice que no funciona es el " + indice);
-				System.out.println("El valor que no funciona es " + myList.get(indice));
-				
-				Integer castedValue = (Integer)myList.get(indice).toString().length();
-				integerList.add(castedValue);
-				System.out.println(integerList);
-				indice ++;
-			}
+			
 			if(indice == myList.size()-1) {
 				test = false;
 			}
 			
 		}
+	
 	}
 
 }
