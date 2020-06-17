@@ -1,20 +1,21 @@
-package proyectClass;
+package proyectoclass;
 
 public class Project {
+
 	String nombre;
 	String descripcion;
 	double initialCost;
-	
+
 	public Project(){		
 	}	
 	public Project(String name){
 		this.nombre = name;
 	}	
 	public Project(String name, String description){
-			this.nombre = name;
-			this.descripcion = description;			
+		this.nombre = name;
+		this.descripcion = description;			
 	}
-	
+
 	//setter y getter variable nombre;
 	public void setName(String name) {
 		nombre = name;
@@ -30,10 +31,11 @@ public class Project {
 	public String getDescription() {
 		return descripcion;
 	}
-	
+
 	//getter ambas variables; 
-	
+
 	public String elevatorPitch() {		
 		return nombre + " : " + descripcion;
 	}
 }
+
